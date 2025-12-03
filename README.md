@@ -1,5 +1,3 @@
-<img width="1105" height="1107" alt="image" src="https://github.com/user-attachments/assets/98f9412c-82af-4639-a796-2ea1f86d03f6" />
-
 # KCO Billing Dashboard
 
 ## Introduction
@@ -143,6 +141,7 @@ json
   },
   ...
 ]
+<img width="2850" height="1615" alt="image" src="https://github.com/user-attachments/assets/a4528ba8-a1cb-4b20-b64a-861a37b11934" />
 
 
 ### 2. Filter by Cloud Provider
@@ -150,8 +149,9 @@ json
 
 GET /api/spend?cloud=AWS
 
-
 *Expected Response:* Rows only where cloud_provider = "AWS"
+
+<img width="2861" height="1630" alt="image" src="https://github.com/user-attachments/assets/ee8e749b-63e2-4732-8502-92074d411341" />
 
 ### 3. Filter by Team
 
@@ -160,6 +160,8 @@ GET /api/spend?team=Data
 
 
 *Expected Response:* Rows only where team = "Data"
+
+<img width="2850" height="1615" alt="image" src="https://github.com/user-attachments/assets/8deb1ba4-66a3-4d9d-b121-5ac8f3c75a4a" />
 
 ### 4. Combined Filters
 
@@ -171,6 +173,9 @@ GET /api/spend?cloud=GCP&team=Core&env=prod
 - cloud_provider = "GCP"
 - team = "Core"
 - env = "prod"
+
+  <img width="2852" height="1616" alt="image" src="https://github.com/user-attachments/assets/3d92c8d0-8048-4a5b-9c41-6f4dd0d3b72a" />
+
 
 ## Assumptions Made
 
