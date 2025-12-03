@@ -112,7 +112,7 @@ bash
 
 cd backend
 
-npm run dev
+nodemon server.js
 
 
 Server runs at: 👉 *http://localhost:5000*
