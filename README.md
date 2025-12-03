@@ -81,7 +81,7 @@ Local sample files stored in backend/data:
 ### Clone the Repository
 
 bash
-git clone https://github.com/<your-username>/kco-billing-dashboard.git
+git clone https://github.com/Shrey0607/k-co-billing-dashboard.git
 cd kco-billing-dashboard
 
 
