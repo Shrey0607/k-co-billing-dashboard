@@ -83,7 +83,7 @@ Local sample files stored in backend/data:
 bash
 git clone https://github.com/Shrey0607/k-co-billing-dashboard.git
 
-cd kco-billing-dashboard
+cd k-co-billing-dashboard
 
 
 ### Install Backend Dependencies
