@@ -89,14 +89,18 @@ cd k-co-billing-dashboard
 ### Install Backend Dependencies
 
 bash
+
 cd backend
+
 npm install
 
 
 ### Install Frontend Dependencies
 
 bash
+
 cd ../frontend
+
 npm install
 
 
@@ -105,7 +109,9 @@ npm install
 ### Start Backend
 
 bash
+
 cd backend
+
 npm run dev
 
 
@@ -114,7 +120,9 @@ Server runs at: 👉 *http://localhost:5000*
 ### Start Frontend
 
 bash
+
 cd frontend
+
 npm run dev
 
 
