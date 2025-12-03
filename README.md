@@ -194,3 +194,6 @@ GET /api/spend?cloud=GCP&team=Core&env=prod
 - Add search functionality (filter by service name)
 - Data persistence via SQLite or MongoDB instead of static JSON
 - Authentication for users & roles
+
+### Screenshot Notice
+**Note:** The UI in the screenshots may appear slightly different from the actual application because the display has been zoomed out to capture more visual content in a single frame.
