@@ -1,4 +1,4 @@
-# KCO Billing Dashboard
+# K&CO. Billing Dashboard
 
 ## Introduction
 
