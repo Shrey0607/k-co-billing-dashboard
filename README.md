@@ -1,3 +1,5 @@
+<img width="1105" height="1107" alt="image" src="https://github.com/user-attachments/assets/98f9412c-82af-4639-a796-2ea1f86d03f6" />
+
 # KCO Billing Dashboard
 
 ## Introduction
@@ -169,40 +171,6 @@ GET /api/spend?cloud=GCP&team=Core&env=prod
 - cloud_provider = "GCP"
 - team = "Core"
 - env = "prod"
-
-## Project Structure
-
-kco-billing-dashboard/
-│
-├── backend/
-│   ├── data/
-│   │   └── sample-data.json
-│   ├── routes/
-│   │   └── spend.js
-│   ├── utils/
-│   │   └── filterData.js
-│   ├── server.js
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   ├── main.jsx
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   ├── components/
-│   │   │   ├── FilterPanel.jsx
-│   │   │   ├── Summary.jsx
-│   │   │   ├── DataTable.jsx
-│   │   │   ├── Chart.jsx
-│   │   │   └── DetailModal.jsx
-│   ├── package.json
-│   └── vite.config.js
-│
-└── README.md
-
-
 
 ## Assumptions Made
 
