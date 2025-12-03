@@ -172,31 +172,36 @@ GET /api/spend?cloud=GCP&team=Core&env=prod
 
 ## Project Structure
 
-
 kco-billing-dashboard/
+│
 ├── backend/
-│   ├── server.js
+│   ├── data/
+│   │   └── sample-data.json
 │   ├── routes/
 │   │   └── spend.js
 │   ├── utils/
 │   │   └── filterData.js
-│   └── data/
-│       ├── aws_line_items_12mo.csv
-│       ├── gcp_billing_12mo.csv
-│       └── sample-data.json
-└── frontend/
-    └── src/
-        ├── App.jsx
-        ├── App.css
-        ├── main.jsx
-        ├── services/
-        │   └── api.js
-        └── components/
-            ├── FilterPanel.jsx
-            ├── Summary.jsx
-            ├── DataTable.jsx
-            ├── Chart.jsx
-            └── DetailModal.jsx
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── main.jsx
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── components/
+│   │   │   ├── FilterPanel.jsx
+│   │   │   ├── Summary.jsx
+│   │   │   ├── DataTable.jsx
+│   │   │   ├── Chart.jsx
+│   │   │   └── DetailModal.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md
+
 
 
 ## Assumptions Made
