@@ -129,19 +129,7 @@ GET /api/spend
 
 *Expected Response:*
 
-json
-[
-  {
-    "date": "2025-01-01",
-    "cloud_provider": "AWS",
-    "service": "EC2",
-    "team": "Core",
-    "env": "prod",
-    "cost_usd": 1234.56
-  },
-  ...
-]
-<img width="2850" height="1615" alt="image" src="https://github.com/user-attachments/assets/a4528ba8-a1cb-4b20-b64a-861a37b11934" />
+<img width="2849" height="1622" alt="image" src="https://github.com/user-attachments/assets/44fbec89-d63e-4dd9-8656-80a8466cae10" />
 
 
 ### 2. Filter by Cloud Provider
@@ -149,9 +137,10 @@ json
 
 GET /api/spend?cloud=AWS
 
+
 *Expected Response:* Rows only where cloud_provider = "AWS"
 
-<img width="2861" height="1630" alt="image" src="https://github.com/user-attachments/assets/ee8e749b-63e2-4732-8502-92074d411341" />
+<img width="2852" height="1636" alt="image" src="https://github.com/user-attachments/assets/e7572065-bd0b-450d-996d-f78a202755f6" />
 
 ### 3. Filter by Team
 
@@ -161,7 +150,7 @@ GET /api/spend?team=Data
 
 *Expected Response:* Rows only where team = "Data"
 
-<img width="2850" height="1615" alt="image" src="https://github.com/user-attachments/assets/8deb1ba4-66a3-4d9d-b121-5ac8f3c75a4a" />
+<img width="2844" height="1622" alt="image" src="https://github.com/user-attachments/assets/013efb70-2aee-42ec-b037-1ab8a8175917" />
 
 ### 4. Combined Filters
 
@@ -174,7 +163,7 @@ GET /api/spend?cloud=GCP&team=Core&env=prod
 - team = "Core"
 - env = "prod"
 
-  <img width="2852" height="1616" alt="image" src="https://github.com/user-attachments/assets/3d92c8d0-8048-4a5b-9c41-6f4dd0d3b72a" />
+<img width="2845" height="1620" alt="image" src="https://github.com/user-attachments/assets/c9421feb-8e90-4af8-8dd6-853c71a52d99" />
 
 
 ## Assumptions Made
