@@ -115,7 +115,7 @@ cd backend
 nodemon server.js
 
 
-Server runs at: 👉 *http://localhost:5000*
+Server runs at: 👉 http://localhost:5000/api/spend
 
 ### Start Frontend
 
