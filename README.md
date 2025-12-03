@@ -1,153 +1,135 @@
-📊 KCO Billing Dashboard
-🚀 Introduction
+# KCO Billing Dashboard
 
-KCO Billing Dashboard is a simple internal web app that demonstrates multi-cloud cost visibility. It reads sample billing exports (AWS / GCP), consolidates and processes them on a small Node.js/Express backend, and displays the results in a React dashboard UI.
+## Introduction
 
-🎯 Purpose
+*KCO Billing Dashboard* is a simple internal web app that demonstrates multi-cloud cost visibility. It reads sample billing exports (AWS / GCP), consolidates and processes them on a small Node.js/Express backend, and displays the results in a React dashboard UI.
+
+## Purpose
 
 The app is intended as a take-home assignment to show:
 
-Full-stack ability – End-to-end application development
+- *Full-stack ability* - End-to-end application development
+- *Data transformation* - Processing and consolidating cloud billing data
+- *Clean UI* - User-friendly and intuitive interface
+- *Readable code structure* - Well-organized and maintainable codebase
 
-Data transformation – Processing and consolidating cloud billing data
+## Features
 
-Clean UI – User-friendly and intuitive interface
+### Data Loading
+- Load sample AWS & GCP cloud billing data from the backend
 
-Readable code structure – Well-organized and maintainable codebase
+### Data Table View
+Display billing records with the following columns:
+- Date
+- Cloud Provider
+- Service
+- Team
+- Environment (prod / staging / dev)
+- Cost (USD)
 
-✨ Features
-🔹 Data Loading
+### Sorting & Filtering
+- *Sorting*: By date and cost
+- *Filters*:
+  - Cloud provider (AWS / GCP / All)
+  - Team
+  - Environment (prod / staging / dev / All)
+  - Month (YYYY-MM)
 
-Load sample AWS & GCP cloud billing data from the backend
+### Summary Cards
+- Total spend (filtered)
+- Spend by cloud provider (AWS / GCP)
 
-🔹 Data Table View
+### Additional Features
+- Detail view modal on row click
+- Monthly spend bar chart visualization
+- Basic responsive dashboard layout suitable for desktop
 
-Displays billing records with the following columns:
-
-Date
-
-Cloud Provider
-
-Service
-
-Team
-
-Environment (prod / staging / dev)
-
-Cost (USD)
-
-🔹 Sorting & Filtering
-
-Sorting: By date and cost
-
-Filters:
-
-Cloud provider (AWS / GCP / All)
-
-Team
-
-Environment (prod / staging / dev / All)
-
-Month (YYYY-MM)
-
-🔹 Summary Cards
-
-Total spend (filtered)
-
-Spend by cloud provider (AWS / GCP)
-
-🔹 Additional Features
-
-Detail view modal on row click
-
-Monthly spend bar chart visualization
-
-Basic responsive dashboard layout suitable for desktop
-
-🔹 User Experience
-
+### User Experience
 Graceful handling of application states:
+- "Loading data…"
+- "Failed to load data."
+- "No data found for this filter."
 
-"Loading data…"
+### Code Organization
+- Simple and easily understandable project structure
 
-"Failed to load data."
+## Technologies Used
 
-"No data found for this filter."
+### Frontend
+- *React* (Vite)
+- *Recharts* - Bar/pie charts visualization
+- *Axios* - API calls
+- *Pure CSS* - UI styling without heavy frameworks
 
-🔹 Code Organization
+### Backend
+- *Node.js + Express*
+- Custom filtering logic
+- CSV ingestion & transformation into JSON
 
-Simple and easily understandable project structure
-
-🛠 Technologies Used
-🖥 Frontend
-
-React (Vite)
-
-Recharts – Bar/pie charts visualization
-
-Axios – API calls
-
-Pure CSS – UI styling without heavy frameworks
-
-🖧 Backend
-
-Node.js + Express
-
-Custom filtering logic
-
-CSV ingestion & transformation into JSON
-
-🗂 Data
-
+### Data
 Local sample files stored in backend/data:
+- aws_line_items_12mo.csv
+- gcp_billing_12mo.csv
+- Merged into: sample-data.json
 
-aws_line_items_12mo.csv
+### Dev Tools
+- *nodemon*
+- *npm*
 
-gcp_billing_12mo.csv
+## Installation
 
-Merged into: sample-data.json
+### Clone the Repository
 
-🧰 Dev Tools
-
-nodemon
-
-npm
-
-🔧 Installation
-1️⃣ Clone the Repository
+bash
 git clone https://github.com/<your-username>/kco-billing-dashboard.git
 cd kco-billing-dashboard
 
-2️⃣ Install Backend Dependencies
+
+### Install Backend Dependencies
+
+bash
 cd backend
 npm install
 
-3️⃣ Install Frontend Dependencies
+
+### Install Frontend Dependencies
+
+bash
 cd ../frontend
 npm install
 
-▶️ Usage
-Start Backend
+
+## Usage
+
+### Start Backend
+
+bash
 cd backend
 npm run dev
 
 
-Server runs at: 👉 http://localhost:5000
+Server runs at: 👉 *http://localhost:5000*
 
-Start Frontend
+### Start Frontend
+
+bash
 cd frontend
 npm run dev
 
 
-Frontend runs at: 👉 http://localhost:5173/
+Frontend runs at: 👉 *http://localhost:5173/*
 
-🌐 API Routes
-1. Fetch All Data
+## API Routes
+
+### 1. Fetch All Data
+
+
 GET /api/spend
 
 
-Expected Response:
+*Expected Response:*
 
+json
 [
   {
     "date": "2025-01-01",
@@ -156,36 +138,41 @@ Expected Response:
     "team": "Core",
     "env": "prod",
     "cost_usd": 1234.56
-  }
+  },
+  ...
 ]
 
-2. Filter by Cloud Provider
+
+### 2. Filter by Cloud Provider
+
+
 GET /api/spend?cloud=AWS
 
 
-Expected Response:
-Rows only where cloud_provider = "AWS"
+*Expected Response:* Rows only where cloud_provider = "AWS"
 
-3. Filter by Team
+### 3. Filter by Team
+
+
 GET /api/spend?team=Data
 
 
-Expected Response:
-Rows only where team = "Data"
+*Expected Response:* Rows only where team = "Data"
 
-4. Combined Filters
+### 4. Combined Filters
+
+
 GET /api/spend?cloud=GCP&team=Core&env=prod
 
 
-Expected Response: Records where:
+*Expected Response:* Records where:
+- cloud_provider = "GCP"
+- team = "Core"
+- env = "prod"
 
-cloud_provider = "GCP"
+## Project Structure
 
-team = "Core"
 
-env = "prod"
-
-📁 Project Structure
 kco-billing-dashboard/
 ├── backend/
 │   ├── server.js
@@ -211,48 +198,32 @@ kco-billing-dashboard/
             ├── Chart.jsx
             └── DetailModal.jsx
 
-📌 Assumptions Made
 
-Billing format fields are consistent across cloud providers
+## Assumptions Made
 
-All costs are in USD
+- Billing format fields are consistent across cloud providers
+- All costs are in USD
+- "month" filter uses the first 7 characters of date (YYYY-MM)
+- Data does not exceed memory limitations of static load
+- No user authentication required for this internal dashboard
+- Dashboard will primarily be viewed on desktop web
 
-"month" filter uses the first 7 characters of date (YYYY-MM)
+## What's Completed
 
-Data does not exceed memory limitations of static load
+- Fully working backend API
+- Cloud + Team + Env + Month filters
+- Sorting by Date & Cost
+- Detail modal on row click
+- Summary card with totals
+- Monthly spend chart
+- CSV transformation into unified JSON dataset
+- Simple but clean UI design
+- Graceful UX states
+- Error handling
+- Responsive container layout
 
-No user authentication required for this internal dashboard
+## What I Would Do Next (With More Time)
 
-Dashboard will primarily be viewed on desktop web
-
-✔️ What's Completed
-
-Fully working backend API
-
-Cloud + Team + Env + Month filters
-
-Sorting by Date & Cost
-
-Detail modal on row click
-
-Summary card with totals
-
-Monthly spend chart
-
-CSV transformation into unified JSON dataset
-
-Simple but clean UI design
-
-Graceful UX states
-
-Error handling
-
-Responsive container layout
-
-🔮 What I Would Do Next (With More Time)
-
-Add search functionality (filter by service name)
-
-Data persistence via SQLite or MongoDB instead of static JSON
-
-Authentication for users & roles
+- Add search functionality (filter by service name)
+- Data persistence via SQLite or MongoDB instead of static JSON
+- Authentication for users & roles
