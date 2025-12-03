@@ -1,10 +1,9 @@
-KCO Billing Dashboard
-
-Introduction
+📊 KCO Billing Dashboard
+🚀 Introduction
 
 KCO Billing Dashboard is a simple internal web app that demonstrates multi-cloud cost visibility. It reads sample billing exports (AWS / GCP), consolidates and processes them on a small Node.js/Express backend, and displays the results in a React dashboard UI.
 
-Purpose
+🎯 Purpose
 
 The app is intended as a take-home assignment to show:
 
@@ -16,12 +15,12 @@ Clean UI – User-friendly and intuitive interface
 
 Readable code structure – Well-organized and maintainable codebase
 
-Features
-Data Loading
+✨ Features
+🔹 Data Loading
 
 Load sample AWS & GCP cloud billing data from the backend
 
-Data Table View
+🔹 Data Table View
 
 Displays billing records with the following columns:
 
@@ -37,7 +36,7 @@ Environment (prod / staging / dev)
 
 Cost (USD)
 
-Sorting & Filtering
+🔹 Sorting & Filtering
 
 Sorting: By date and cost
 
@@ -51,13 +50,13 @@ Environment (prod / staging / dev / All)
 
 Month (YYYY-MM)
 
-Summary Cards
+🔹 Summary Cards
 
 Total spend (filtered)
 
 Spend by cloud provider (AWS / GCP)
 
-Additional Features
+🔹 Additional Features
 
 Detail view modal on row click
 
@@ -65,7 +64,7 @@ Monthly spend bar chart visualization
 
 Basic responsive dashboard layout suitable for desktop
 
-User Experience
+🔹 User Experience
 
 Graceful handling of application states:
 
@@ -75,12 +74,12 @@ Graceful handling of application states:
 
 "No data found for this filter."
 
-Code Organization
+🔹 Code Organization
 
 Simple and easily understandable project structure
 
-Technologies Used
-Frontend
+🛠 Technologies Used
+🖥 Frontend
 
 React (Vite)
 
@@ -90,7 +89,7 @@ Axios – API calls
 
 Pure CSS – UI styling without heavy frameworks
 
-Backend
+🖧 Backend
 
 Node.js + Express
 
@@ -98,7 +97,7 @@ Custom filtering logic
 
 CSV ingestion & transformation into JSON
 
-Data
+🗂 Data
 
 Local sample files stored in backend/data:
 
@@ -108,41 +107,41 @@ gcp_billing_12mo.csv
 
 Merged into: sample-data.json
 
-Dev Tools
+🧰 Dev Tools
 
 nodemon
 
 npm
 
-Installation
-Clone the Repository
+🔧 Installation
+1️⃣ Clone the Repository
 git clone https://github.com/<your-username>/kco-billing-dashboard.git
 cd kco-billing-dashboard
 
-Install Backend Dependencies
+2️⃣ Install Backend Dependencies
 cd backend
 npm install
 
-Install Frontend Dependencies
+3️⃣ Install Frontend Dependencies
 cd ../frontend
 npm install
 
-Usage
+▶️ Usage
 Start Backend
 cd backend
 npm run dev
 
 
-Server runs at: http://localhost:5000
+Server runs at: 👉 http://localhost:5000
 
 Start Frontend
 cd frontend
 npm run dev
 
 
-Frontend runs at: http://localhost:5173/
+Frontend runs at: 👉 http://localhost:5173/
 
-API Routes
+🌐 API Routes
 1. Fetch All Data
 GET /api/spend
 
@@ -186,7 +185,7 @@ team = "Core"
 
 env = "prod"
 
-Project Structure
+📁 Project Structure
 kco-billing-dashboard/
 ├── backend/
 │   ├── server.js
@@ -212,7 +211,7 @@ kco-billing-dashboard/
             ├── Chart.jsx
             └── DetailModal.jsx
 
-Assumptions Made
+📌 Assumptions Made
 
 Billing format fields are consistent across cloud providers
 
@@ -226,7 +225,7 @@ No user authentication required for this internal dashboard
 
 Dashboard will primarily be viewed on desktop web
 
-What's Completed
+✔️ What's Completed
 
 Fully working backend API
 
@@ -250,7 +249,7 @@ Error handling
 
 Responsive container layout
 
-What I Would Do Next (With More Time)
+🔮 What I Would Do Next (With More Time)
 
 Add search functionality (filter by service name)
 
