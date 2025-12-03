@@ -112,7 +112,7 @@ bash
 
 cd backend
 
-nodemon server.js
+nodemon server.js or node server.js
 
 
 Server runs at: 👉 http://localhost:5000/api/spend
